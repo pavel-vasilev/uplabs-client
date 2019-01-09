@@ -7,7 +7,7 @@ import 'package:uplabs/repository/user_repository.dart';
 
 final api = UplabsApi('https://uplabs.com', http.Client(), json);
 
-final repository = UserRepository(api);
+final repository = UserRepository(api, {});
 
 final router = Router()
   ..define('/users/:nickname', handler: profileRoute)

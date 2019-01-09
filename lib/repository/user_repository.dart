@@ -6,9 +6,9 @@ import 'package:uplabs/network/uplabs_api.dart';
 class UserRepository {
   final UplabsApi api;
 
-  final Map<String, User> cache = {};
+  final Map<String, User> cache;
 
-  UserRepository(this.api);
+  UserRepository(this.api, this.cache);
 
   User getUser(String nickname) => cache[nickname];
 

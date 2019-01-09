@@ -7,8 +7,15 @@ class User {
   final int followers;
   final int following;
 
-  User(this.id, this.nickname, this.fullName, this.headline, this.avatarUrl,
-      this.followers, this.following);
+  User(
+    this.id,
+    this.nickname,
+    this.fullName,
+    this.headline,
+    this.avatarUrl,
+    this.followers,
+    this.following,
+  );
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
