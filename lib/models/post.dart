@@ -17,13 +17,13 @@ class Post {
   factory Post.fromJson(Map<String, dynamic> json) {
     return Post(
       json["id"],
-      json["title"],
+      json["name"],
       json["description_without_html"],
       json["preview_url"],
       json["category_friendly_name"],
       json["subcategory_friendly_name"],
       User.fromJson(json["serialized_submitter"]),
-      DateTime.parse(json["showcased_at"]),
+      json["showcased_at"] != null ? DateTime.parse(json["showcased_at"]) : null,
     );
   }
 }

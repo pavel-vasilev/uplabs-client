@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uplabs/dependencies.dart';
 import 'package:uplabs/models/user.dart';
 import 'package:uplabs/widgets/profile_tile.dart';
-import 'package:uplabs/repository/user_repository_provider.dart';
 
 class FollowersScreen extends StatelessWidget {
   final String nickname;
@@ -10,7 +10,6 @@ class FollowersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var repository = UserRepositoryProvider.of(context).repository;
     return Scaffold(
       appBar: AppBar(
         title: Text('Followers'),
