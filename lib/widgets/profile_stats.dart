@@ -12,7 +12,9 @@ class ProfileStats extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed("/users/${user.nickname}/followers");
+            },
             child: Center(
               child: Column(
                 children: <Widget>[
@@ -28,7 +30,9 @@ class ProfileStats extends StatelessWidget {
         ),
         Expanded(
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed("/users/${user.nickname}/following");
+            },
             child: Center(
               child: Column(
                 children: <Widget>[
