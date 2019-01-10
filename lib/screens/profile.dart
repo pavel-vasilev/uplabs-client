@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:uplabs/dependencies.dart';
 import 'package:uplabs/models/profile.dart';
+import 'package:uplabs/models/post.dart';
+import 'package:uplabs/widgets/paged_list.dart';
 import 'package:uplabs/widgets/profile_header.dart';
 import 'package:uplabs/widgets/profile_stats.dart';
 import 'package:uplabs/widgets/post_preview.dart';
@@ -22,39 +24,50 @@ class ProfileScreen extends StatelessWidget {
           builder: (BuildContext context, AsyncSnapshot<Profile> snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               var profile = snapshot.data;
-              return ListView(
-                shrinkWrap: true,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      vertical: 24.0,
-                    ),
-                    child: ProfileHeader(
-                      user: profile.user,
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      vertical: 24.0,
-                    ),
-                    child: ProfileStats(
-                      user: profile.user,
-                    ),
-                  ),
-                  GridView.builder(
-                    primary: false,
+              return PagedList<Post>(
+                initialData: profile.posts,
+                startPage: 2,
+                onLoadMore: (int page) {
+                  return repository
+                      .getProfile(nickname, page)
+                      .then((Profile profile) => profile.posts);
+                },
+                builder: (BuildContext context, List<dynamic> posts) {
+                  return ListView(
                     shrinkWrap: true,
-                    itemCount: profile.posts.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                    ),
-                    itemBuilder: (BuildContext context, int index) {
-                      return PostPreview(
-                        post: profile.posts[index],
-                      );
-                    },
-                  ),
-                ],
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          vertical: 24.0,
+                        ),
+                        child: ProfileHeader(
+                          user: profile.user,
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          vertical: 24.0,
+                        ),
+                        child: ProfileStats(
+                          user: profile.user,
+                        ),
+                      ),
+                      GridView.builder(
+                        primary: false,
+                        shrinkWrap: true,
+                        itemCount: posts.length,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                        ),
+                        itemBuilder: (BuildContext context, int index) {
+                          return PostPreview(
+                            post: posts[index],
+                          );
+                        },
+                      ),
+                    ],
+                  );
+                },
               );
             } else {
               var user = repository.getUser(nickname);

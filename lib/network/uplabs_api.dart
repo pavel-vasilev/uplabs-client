@@ -11,8 +11,8 @@ class UplabsApi {
 
   UplabsApi(this.baseUrl, this.client, this.codec);
 
-  Future<Profile> getProfile(String nickname) async {
-    var response = await client.get('$baseUrl/users/$nickname.json');
+  Future<Profile> getProfile(String nickname, int page) async {
+    var response = await client.get('$baseUrl/users/$nickname.json?page=$page');
     var profile = Profile.fromJson(codec.decode(response.body));
     return profile;
   }

@@ -12,8 +12,8 @@ class UserRepository {
 
   User getUser(String nickname) => cache[nickname];
 
-  Future<Profile> getProfile(String nickname) async {
-    var profile = await api.getProfile(nickname);
+  Future<Profile> getProfile(String nickname, [int page = 1]) async {
+    var profile = await api.getProfile(nickname, page);
     var user = profile.user;
     cache[user.nickname] = user;
     return profile;
