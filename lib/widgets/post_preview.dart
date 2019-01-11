@@ -9,15 +9,23 @@ class PostPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var medal;
+    if (post.hasGoldMedal) {
+      medal = "gold";
+    } else if (post.hasSilverMedal) {
+      medal = "silver";
+    } else if (post.hasBronzeMedal) {
+      medal = "bronze";
+    }
     return Stack(
       children: <Widget>[
         Image.network(post.teaserUrl),
-        post.hasGoldMedal
+            medal != null
             ? Positioned(
                 top: 0.0,
                 right: 8.0,
                 child: SvgPicture.asset(
-                  'images/${post.category.toLowerCase()}.svg',
+                  'images/$medal/${post.category.toLowerCase()}.svg',
                   width: 48.0,
                   height: 48.0,
                 ),

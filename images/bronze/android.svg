@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="medal medal--gold" viewBox="0 0 38 46" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" fill-rule="evenodd" stroke-width="1px">
+<g fill="none" stroke-width="1px">
+<g fill-rule="nonzero" stroke-width="1px">
+<polygon class="medal__shevron-outer medal__shevron-outer--gold" points="23.392 0 37.758 0 25.815 15.66 11.45 15.66" fill="#4236dd"/>
+<polygon class="medal__shevron-inner medal__shevron-inner--gold" points="27.942 0 32.884 0 21.262 15.66 16.32 15.66" fill="#eaeae4"/>
+<circle class="medal__circle medal__circle--gold" cx="19" cy="31.35" r="14.65" fill="#b1978c"/>
+<path class="medal__line medal__line--gold" d="m11.958 19.574v-3.9149h14.084v3.9149l3.018 1.9574v-7.8298c0-0.42582-0.56951-0.97872-1.006-0.97872h-18.108c-0.43552 0-1.006 0.5529-1.006 0.97872v7.8298l3.018-1.9574z" fill="#b1978c"/>
+<ellipse class="medal__circle-inner medal__circle-inner--gold" cx="19.487" cy="31.319" rx="11.205" ry="11.255" fill="#886f65"/>
+<polygon class="medal__shevron-outer medal__shevron-outer--gold" points="14.329 0 0.24354 0 11.953 15.66 26.039 15.66" fill="#4236dd"/>
+<polygon class="medal__shevron-inner medal__shevron-inner--gold" points="9.7671 0 4.7298 0 16.574 15.66 21.612 15.66" fill="#eaeae4"/>
+<path class="medal__line medal__line--gold" d="M15 35.5c0 .367.3.667.667.667h.666V38.5c0 .553.447 1 1 1 .554 0 1-.447 1-1v-2.333h1.334V38.5c0 .553.446 1 1 1 .553 0 1-.447 1-1v-2.333h.666c.367 0 .667-.3.667-.667v-6.667h-8V35.5zm-1.667-6.667c-.553 0-1 .447-1 1V34.5c0 .553.447 1 1 1 .554 0 1-.447 1-1v-4.667c0-.553-.446-1-1-1zm11.334 0c-.554 0-1 .447-1 1V34.5c0 .553.446 1 1 1 .553 0 1-.447 1-1v-4.667c0-.553-.447-1-1-1zm-3.314-3.893l.867-.867a.33.33 0 0 0 0-.473.33.33 0 0 0-.473 0l-.987.987a3.893 3.893 0 0 0-1.76-.42c-.64 0-1.24.153-1.773.42l-.994-.987a.33.33 0 0 0-.473 0 .33.33 0 0 0 0 .473l.873.874A3.989 3.989 0 0 0 15 28.167h8c0-1.327-.647-2.5-1.647-3.227zm-3.686 1.893H17v-.666h.667v.666zm3.333 0h-.667v-.666H21v.666z" fill="#b1978c"/>
+</g>
+</g>
+</g>
+</svg>

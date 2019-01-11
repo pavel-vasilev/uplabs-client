@@ -39,13 +39,27 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/android.svg
-    - images/web.svg
-    - images/ios.svg
-    - images/branding.svg
-    - images/3d.svg
-    - images/illustration.svg
-    - images/motion.svg
+    - images/gold/android.svg
+    - images/gold/web.svg
+    - images/gold/ios.svg
+    - images/gold/branding.svg
+    - images/gold/3d.svg
+    - images/gold/illustration.svg
+    - images/gold/motion.svg
+    - images/silver/android.svg
+    - images/silver/web.svg
+    - images/silver/ios.svg
+    - images/silver/branding.svg
+    - images/silver/3d.svg
+    - images/silver/illustration.svg
+    - images/silver/motion.svg
+    - images/bronze/android.svg
+    - images/bronze/web.svg
+    - images/bronze/ios.svg
+    - images/bronze/branding.svg
+    - images/bronze/3d.svg
+    - images/bronze/illustration.svg
+    - images/bronze/motion.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

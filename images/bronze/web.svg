@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="medal medal--gold" viewBox="0 0 38 46" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" fill-rule="evenodd" stroke-width="1px">
+<g fill="none" stroke-width="1px">
+<g fill-rule="nonzero" stroke-width="1px">
+<polygon class="medal__shevron-outer medal__shevron-outer--gold" points="23.392 0 37.758 0 25.815 15.66 11.45 15.66" fill="#4236dd"/>
+<polygon class="medal__shevron-inner medal__shevron-inner--gold" points="27.942 0 32.884 0 21.262 15.66 16.32 15.66" fill="#eaeae4"/>
+<circle class="medal__circle medal__circle--gold" cx="19" cy="31.35" r="14.65" fill="#b1978c"/>
+<path class="medal__line medal__line--gold" d="m11.958 19.574v-3.9149h14.084v3.9149l3.018 1.9574v-7.8298c0-0.42582-0.56951-0.97872-1.006-0.97872h-18.108c-0.43552 0-1.006 0.5529-1.006 0.97872v7.8298l3.018-1.9574z" fill="#b1978c"/>
+<ellipse class="medal__circle-inner medal__circle-inner--gold" cx="19.487" cy="31.319" rx="11.205" ry="11.255" fill="#886f65"/>
+<polygon class="medal__shevron-outer medal__shevron-outer--gold" points="14.329 0 0.24354 0 11.953 15.66 26.039 15.66" fill="#4236dd"/>
+<polygon class="medal__shevron-inner medal__shevron-inner--gold" points="9.7671 0 4.7298 0 16.574 15.66 21.612 15.66" fill="#eaeae4"/>
+<path class="medal__line medal__line--gold" d="M24.25 26.167h-10.5a1.17 1.17 0 0 0-1.167 1.166v7A1.17 1.17 0 0 0 13.75 35.5h4.083v1.167h-1.166v1.166h4.666v-1.166h-1.166V35.5h4.083a1.17 1.17 0 0 0 1.167-1.167v-7a1.17 1.17 0 0 0-1.167-1.166zm0 8.166h-10.5v-7h10.5v7z" fill="#b1978c"/>
+</g>
+</g>
+</g>
+</svg>

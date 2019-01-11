@@ -1,0 +1,43 @@
+<svg class="medal medal--gold" height="46px" viewBox="0 0 38 46" width="38px"
+    xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1px">
+        <g fill="none" stroke="none" stroke-width="1px">
+            <g fill="none" stroke="none" stroke-width="1px">
+                <polygon class="medal__shevron-outer medal__shevron-outer--gold" fill="#4236dd"
+                    fill-rule="nonzero"
+                    points="23.3922971 0 37.7576921 0 25.8153948 15.6595745 11.4499998 15.6595745" stroke="none" stroke-width="1px"></polygon>
+                <polygon class="medal__shevron-inner medal__shevron-inner--gold" fill="#eaeae4"
+                    fill-rule="nonzero"
+                    points="27.9416222 0 32.8841023 0 21.2624798 15.6595745 16.3199997 15.6595745" stroke="none" stroke-width="1px"></polygon>
+                <circle class="medal__circle medal__circle--gold" cx="18.9999995"
+                    cy="31.3500004" fill="#b1978c" fill-rule="nonzero" r="14.6499996" stroke="none"
+                    stroke-width="1px"></circle>
+                <path class="medal__line medal__line--gold"
+                    d="M11.9579997,19.5744681 L11.9579997,15.6595745 L26.0420003,15.6595745 L26.0420003,19.5744681 L29.0600004,21.5319149 L29.0600004,13.7021277 C29.0600004,13.2763045 28.4904947,12.7234043 28.0540004,12.7234043 L9.94599962,12.7234043 C9.51048033,12.7234043 8.93999958,13.2763045 8.93999958,13.7021277 L8.93999958,21.5319149 L11.9579997,19.5744681 Z"
+                    fill="#b1978c" fill-rule="nonzero" stroke="none" stroke-width="1px"></path>
+                <ellipse class="medal__circle-inner medal__circle-inner--gold" cx="19.4871795"
+                    cy="31.3191489" fill="#886f65" fill-rule="nonzero" rx="11.2051282" ry="11.2553191"
+                    stroke="none" stroke-width="1px"></ellipse>
+                <polygon class="medal__shevron-outer medal__shevron-outer--gold" fill="#4236dd"
+                    fill-rule="nonzero"
+                    points="14.3292458 0 0.243539518 0 11.9533248 15.6595745 26.0390311 15.6595745" stroke="none" stroke-width="1px"></polygon>
+                <polygon class="medal__shevron-inner medal__shevron-inner--gold" fill="#eaeae4"
+                    fill-rule="nonzero"
+                    points="9.76705478 0 4.72976887 0 16.5743153 15.6595745 21.6116012 15.6595745" stroke="none" stroke-width="1px"></polygon>
+                <g class="medal__line medal__line--gold" fill="#f9ac30"
+                    stroke="none" stroke-width="1px" transform="translate(9.5 21.5)">
+                    <line fill="none" stroke="#b1978c" stroke-width="2px" x1="3" x2="3" y1="8"
+                        y2="12"></line>
+                    <line fill="none" stroke="#b1978c" stroke-width="2px" x1="6.5" x2="6.5" y1="6"
+                        y2="15"></line>
+                    <line fill="none" stroke="#b1978c" stroke-width="2px" x1="10" x2="10" y1="2"
+                        y2="18"></line>
+                    <line fill="none" stroke="#b1978c" stroke-width="2px" x1="13.5" x2="13.5" y1="6"
+                        y2="15"></line>
+                    <line fill="none" stroke="#b1978c" stroke-width="2px" x1="17" x2="17" y1="8"
+                        y2="12"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
