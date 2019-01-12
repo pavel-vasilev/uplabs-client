@@ -3,6 +3,7 @@ import 'dart:convert' show JsonCodec;
 import 'package:http/http.dart' show Client;
 import 'package:uplabs/models/user.dart';
 import 'package:uplabs/models/profile.dart';
+import 'package:uplabs/models/comment.dart';
 
 class UplabsApi {
   final String baseUrl;
@@ -29,5 +30,12 @@ class UplabsApi {
     List<dynamic> json = codec.decode(response.body);
     var users = json.map((it) => User.fromJson(it)).toList();
     return users;
+  }
+
+  Future<List<Comment>> getComments(int postId) async {
+    var response = await client.get('$baseUrl/comments.json?commentable_type=post&commentable_id=$postId');
+    List<dynamic> json = codec.decode(response.body)['comments'];
+    var comments = json.map((it) => Comment.fromJson(it)).toList();
+    return comments;
   }
 }
