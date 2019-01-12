@@ -17,21 +17,29 @@ class PostPreview extends StatelessWidget {
     } else if (post.hasBronzeMedal) {
       medal = "bronze";
     }
-    return Stack(
-      children: <Widget>[
-        Image.network(post.teaserUrl),
-            medal != null
-            ? Positioned(
-                top: 0.0,
-                right: 8.0,
-                child: SvgPicture.asset(
-                  'images/$medal/${post.category.toLowerCase()}.svg',
-                  width: 48.0,
-                  height: 48.0,
-                ),
-              )
-            : Container(),
-      ],
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pushNamed('/posts/${post.id}'),
+      child: Stack(
+        children: <Widget>[
+          Hero(
+            tag: post.id,
+            child: Image.network(
+              post.teaserUrl,
+            ),
+          ),
+          medal != null
+              ? Positioned(
+                  top: 0.0,
+                  right: 8.0,
+                  child: SvgPicture.asset(
+                    'images/$medal/${post.category.toLowerCase()}.svg',
+                    width: 48.0,
+                    height: 48.0,
+                  ),
+                )
+              : Container(),
+        ],
+      ),
     );
   }
 }
