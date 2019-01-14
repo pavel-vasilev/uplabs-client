@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'dart:convert' show JsonCodec;
+import 'dart:io';
 import 'package:http/http.dart' show Client;
+import 'package:mime/mime.dart';
+import 'package:path/path.dart';
 import 'package:uplabs/models/user.dart';
 import 'package:uplabs/models/profile.dart';
 import 'package:uplabs/models/comment.dart';
@@ -37,5 +40,21 @@ class UplabsApi {
     List<dynamic> json = codec.decode(response.body)['comments'];
     var comments = json.map((it) => Comment.fromJson(it)).toList();
     return comments;
+  }
+
+  Future<String> upload(File file) async {
+    var objectName = basename(file.path);
+    var contentType = lookupMimeType(file.path);
+    var response = await client.get('$baseUrl/uploads/signing_url?objectName=$objectName&contentType=$contentType');
+    var urls = codec.decode(response.body);
+    var signedUrl = urls['signedUrl'];
+    var fileUrl = urls['fileUrl'];
+    var body = await file.readAsBytes();
+    var headers = {
+      "x-amz-acl": "public-read",
+      "Content-Type": contentType
+    };
+    await client.put(signedUrl, headers: headers, body: body);
+    return fileUrl;
   }
 }
