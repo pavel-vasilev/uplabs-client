@@ -9,6 +9,7 @@ class ProfileTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: EdgeInsets.all(0.0),
       leading: Hero(
         tag: user.nickname,
         child: CircleAvatar(

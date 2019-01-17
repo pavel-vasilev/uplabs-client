@@ -20,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: Center(
         child: FutureBuilder<Profile>(
-          future: repository.getProfile(nickname),
+          future: userRepository.getProfile(nickname),
           builder: (BuildContext context, AsyncSnapshot<Profile> snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               var profile = snapshot.data;
@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
                 initialData: profile.posts,
                 startPage: 2,
                 onLoadMore: (int page) {
-                  return repository
+                  return userRepository
                       .getProfile(nickname, page)
                       .then((Profile profile) => profile.posts);
                 },
@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                 },
               );
             } else {
-              var user = repository.getUser(nickname);
+              var user = userRepository.getUser(nickname);
               if (user != null) {
                 return Column(
                   children: <Widget>[

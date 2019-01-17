@@ -15,7 +15,7 @@ class FollowersScreen extends StatelessWidget {
         title: Text('Followers'),
       ),
       body: FutureBuilder<List<User>>(
-        future: repository.getFollowers(nickname),
+        future: userRepository.getFollowers(nickname),
         builder: (BuildContext context, AsyncSnapshot<List<User>> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             final users = snapshot.data;
