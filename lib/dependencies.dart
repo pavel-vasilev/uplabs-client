@@ -27,4 +27,5 @@ final router = Router()
   ..define('/users/:nickname', handler: profileRoute)
   ..define('/users/:nickname/followers', handler: followersRoute)
   ..define('/users/:nickname/following', handler: followingRoute)
-  ..define('/posts/:id', handler: postDetailsRoute);
+  ..define('/posts/:id', handler: postDetailsRoute)
+  ..define('/posts/:id/comments', handler: commentsRoute);

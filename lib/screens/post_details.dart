@@ -84,7 +84,7 @@ class PostDetailsScreen extends StatelessWidget {
                           style: title,
                         ),
                         action: FlatButton(
-                          onPressed: () {},
+                          onPressed: () => Navigator.of(context).pushNamed('/posts/$postId/comments'),
                           child: Text(
                             "More",
                             style: button,

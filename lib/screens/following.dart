@@ -19,13 +19,16 @@ class FollowingScreen extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<List<User>> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             final users = snapshot.data;
-            return ListView.builder(
-              itemCount: users.length,
-              itemBuilder: (BuildContext context, int index) {
-                return ProfileTile(
-                  user: users[index],
-                );
-              },
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: ListView.builder(
+                itemCount: users.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ProfileTile(
+                    user: users[index],
+                  );
+                },
+              ),
             );
           } else {
             return Container();

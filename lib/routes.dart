@@ -4,6 +4,7 @@ import 'package:uplabs/screens/profile.dart';
 import 'package:uplabs/screens/followers.dart';
 import 'package:uplabs/screens/following.dart';
 import 'package:uplabs/screens/post_details.dart';
+import 'package:uplabs/screens/comments.dart';
 
 var profileRoute = Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -32,6 +33,13 @@ var followingRoute = Handler(
 var postDetailsRoute = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return PostDetailsScreen(
+    postId: int.parse(params['id'][0]),
+  );
+});
+
+var commentsRoute = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return CommentsScreen(
     postId: int.parse(params['id'][0]),
   );
 });
